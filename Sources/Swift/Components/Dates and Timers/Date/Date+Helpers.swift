@@ -397,16 +397,16 @@ extension Date {
 // MARK: - Date Picker
 
 extension Configuration where Type: UIDatePicker {
+//    public static func `default`(minimumDate: Date) -> Self {
+//        .init(id: "default") { picker in
+//            picker.minimumDate = minimumDate
+//            picker.calendar = .default
+//            picker.timeZone = Calendar.default.timeZone
+//        }
+//    }
+    
     public static func `default`(minimumDate: Date) -> Self {
         .init(id: "default") { picker in
-            picker.minimumDate = minimumDate
-            picker.calendar = .default
-            picker.timeZone = Calendar.default.timeZone
-        }
-    }
-    
-    public static func current(minimumDate: Date) -> Self {
-        .init(id: "current") { picker in
             picker.minimumDate = minimumDate
             picker.calendar = Calendar.current
             picker.timeZone = Calendar.current.timeZone
